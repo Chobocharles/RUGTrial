@@ -13,7 +13,6 @@
   <ItemGroup>
     <Folder Include="Models\Responses\" />
     <Folder Include="Records\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
