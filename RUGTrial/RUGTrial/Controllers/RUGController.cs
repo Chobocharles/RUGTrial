@@ -6,7 +6,7 @@ using RUGTrial.Services;
 namespace RUGTrial.Controllers
 {
     [ApiController]
-    [Route("huuihuuu")]
+    [Route("[controller]")]
     public class RUGController(ILogger<RUGController> logger, IRUGService rugService) : ControllerBase
     {
         private readonly ILogger<RUGController> logger = logger;
