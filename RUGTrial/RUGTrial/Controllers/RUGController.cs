@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RUGTrial.Models.Requests;
+using RUGTrial.Models.Responses;
 using RUGTrial.Services;
 
 namespace RUGTrial.Controllers
@@ -11,10 +12,11 @@ namespace RUGTrial.Controllers
         private readonly ILogger<RUGController> logger = logger;
         private readonly IRUGService rugService = rugService;
 
-        [HttpGet(Name = "Get Default Stuff Single")]
-        public async Task DefaultMethod(RUGRequestModel request)
+        [HttpPost(Name = "Get Default Stuff Single")]
+        public RUGResponseModel DefaultMethod(RUGRequestModel request)
         {
             logger.LogInformation($"Executing {nameof(DefaultMethod)} with single request.");
+            return rugService.CalculatePercentages(request);
         }
     }
 }
